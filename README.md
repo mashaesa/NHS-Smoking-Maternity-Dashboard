@@ -24,10 +24,32 @@ This is my first Power BI dashboard, analysing smoking trends during maternity a
 - High number of "Smoking Status Unknown" in Devon.
 - Regional disparities between Northeast and Yorkshire vs. London.
 
-## Recommendations
-- Increase funding for anti-smoking programs in high-risk regions.
-- Improve data collection protocols to reduce unknown smoking statuses.
-- Expand public health campaigns in underserved areas.
+## Smoking and Maternity Report: Key Findings and Analysis
+
+### Highest Percentage of Smokers in NHS Region: Nottingham and Nottinghamshire (14.02%)
+- Could be due to socio-economic factors, such as lower income. There may also be limited access to the correct healthcare and advice for smoking.
+- **Recommendation:** Increase funding and availability for anti-smoking programmes within this region.
+
+### High Number of ‘Smoking Status Unknown’ in Devon
+The line chart comparison revealed that Devon reported 20% of cases where smoking status was unknown during maternity.
+- Potential causes:
+  - Incomplete or inconsistent data collection and reporting practices.
+  - Lack of correct protocols for ensuring smoking status was accurately reported during healthcare visits.
+  - Expecting mothers may have been unwilling to share certain information.
+- **Recommendations:**
+  - Implement better training for healthcare staff to improve the data collection process.
+  - Introduce a non-judgmental approach in consultations to allow for more accurate data collection.
+
+### Regional Division Comparisons: Northeast and Yorkshire vs. London
+The regional division comparison recorded that the Northeast and Yorkshire had the highest percentage of smokers during maternity, whilst London had the lowest overall percentage.
+- Potential reasons:
+  - Lower incomes and limited access to smoking cessation resources in comparison to London.
+  - Cultural factors that influence smoking rates between the two areas.
+  - London may have greater funding and therefore access to healthcare resources, education, and public health campaigns targeting smoking.
+- **Recommendations:**
+  - Expand public health campaigns in the Northeast and Yorkshire area and prioritise low-income families especially.
+  - Conduct a case study on the North West area of London specifically to identify successful strategies and adapt them to higher-risk areas.
+  - Develop a nationwide strategy to reduce smoking during maternity and focus especially on higher-risk areas such as Nottinghamshire, the Northeast, and Yorkshire.
 
 ## Access the Dashboard
 - View the interactive site with screenshots and findings [here](https://mashaesa.github.io/NHS-Smoking-Maternity-Dashboard).
