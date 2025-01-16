@@ -16,11 +16,19 @@
             gap: 20px;
             margin: 20px 0;
         }
-        .image-grid img {
+        .image-item {
+            text-align: center;
+        }
+        .image-item img {
             width: 100%;
             height: auto;
             border: 1px solid #ccc;
             border-radius: 8px; /* Optional: adds rounded corners */
+        }
+        .image-item p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
         }
         .report-text {
             max-height: 300px;
@@ -37,9 +45,18 @@
 
     <h2>Dashboard Screenshots</h2>
     <div class="image-grid">
-         <img src="Screenshot 2025-01-16 at 12.16.59.jpeg" alt="Dashboard Screenshot 1">
-    <img src="Screenshot 2025-01-16 at 12.13.26.jpeg" alt="Dashboard Screenshot 2">
-    <img src="Screenshot 2025-01-16 at 12.14.27.jpeg" alt="Dashboard Screenshot 3">
+        <div class="image-item">
+            <img src="Screenshot 2025-01-16 at 12.16.59.jpeg" alt="Dashboard Screenshot 1">
+            <p>Dashboard Overview</p>
+        </div>
+        <div class="image-item">
+            <img src="Screenshot 2025-01-16 at 12.13.26.jpeg" alt="Dashboard Screenshot 2">
+            <p>Regional Smoking Comparisons</p>
+        </div>
+        <div class="image-item">
+            <img src="Screenshot 2025-01-16 at 12.14.27.jpeg" alt="Dashboard Screenshot 3">
+            <p>Key Findings and Recommendations</p>
+        </div>
     </div>
 
     <h2>Report: Key Findings and Analysis</h2>
