@@ -3,9 +3,16 @@ A Power BI dashboard analysing smoking trends during maternity across NHS region
 
 ## Project Overview
 This is my first Power BI dashboard, analysing smoking trends during maternity across NHS regions. Using NHS data, the report compares smoking rates, highlights areas for improvement, and provides actionable recommendations to the NHS.
+## Dashboard Screenshots
 
-## Access the Dashboard
-- View the interactive site with screenshots and findings [here](https://mashaesa.github.io/NHS-Smoking-Maternity-Dashboard).
+### Dashboard Overview
+![Dashboard Overview](Screenshot%202025-01-16%20at%2012.16.59.jpeg)
+
+### Regional Smoking Comparisons
+![Regional Smoking Comparisons](Screenshot%202025-01-16%20at%2012.13.26.jpeg)
+
+### Key Findings and Recommendations
+![Key Findings and Recommendations](Screenshot%202025-01-16%20at%2012.14.27.jpeg)
 
 ## Tools Used
 - **Power BI**: For data modeling, visualisation, and dashboard creation.
@@ -21,3 +28,6 @@ This is my first Power BI dashboard, analysing smoking trends during maternity a
 - Increase funding for anti-smoking programs in high-risk regions.
 - Improve data collection protocols to reduce unknown smoking statuses.
 - Expand public health campaigns in underserved areas.
+
+## Access the Dashboard
+- View the interactive site with screenshots and findings [here](https://mashaesa.github.io/NHS-Smoking-Maternity-Dashboard).
