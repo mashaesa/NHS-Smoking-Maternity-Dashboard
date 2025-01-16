@@ -10,17 +10,24 @@
             margin: 20px;
             line-height: 1.6;
         }
-        img {
-            max-width: 100%;
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .image-grid img {
+            width: 100%;
             height: auto;
-            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px; /* Optional: adds rounded corners */
         }
         .report-text {
             max-height: 300px;
             overflow-y: scroll;
             border: 1px solid #ccc;
             padding: 10px;
-            background-colour: #f9f9f9;
+            background-color: #f9f9f9;
         }
     </style>
 </head>
@@ -29,9 +36,11 @@
     <p>This dashboard analyses smoking trends during maternity across NHS regions, highlighting disparities and offering actionable recommendations for public health improvement.</p>
 
     <h2>Dashboard Screenshots</h2>
-    <img src="Screenshot 2025-01-16 at 12.16.59.jpeg" alt="Dashboard Screenshot 1">
+    <div class="image-grid">
+         <img src="Screenshot 2025-01-16 at 12.16.59.jpeg" alt="Dashboard Screenshot 1">
     <img src="Screenshot 2025-01-16 at 12.13.26.jpeg" alt="Dashboard Screenshot 2">
     <img src="Screenshot 2025-01-16 at 12.14.27.jpeg" alt="Dashboard Screenshot 3">
+    </div>
 
     <h2>Report: Key Findings and Analysis</h2>
     <div class="report-text">
