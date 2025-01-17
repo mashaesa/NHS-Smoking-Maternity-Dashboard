@@ -46,6 +46,7 @@ The regional division comparison recorded that the Northeast and Yorkshire had t
   - Lower incomes and limited access to smoking cessation resources in comparison to London.
   - Cultural factors that influence smoking rates between the two areas.
   - London may have greater funding and therefore access to healthcare resources, education, and public health campaigns targeting smoking.
+
 - **Recommendations:**
   - Expand public health campaigns in the Northeast and Yorkshire area and prioritise low-income families especially.
   - Conduct a case study on the North West area of London specifically to identify successful strategies and adapt them to higher-risk areas.
@@ -53,3 +54,57 @@ The regional division comparison recorded that the Northeast and Yorkshire had t
 
 ## Access the Dashboard
 - View the interactive site with screenshots and findings [here](https://mashaesa.github.io/NHS-Smoking-Maternity-Dashboard).
+---
+### ANALYSING WITH PYTHON (EXTRA TASK)
+
+```python
+import pandas as pd
+
+file_path = "nhs_smoking_data.csv"  # Replace with the actual path to your dataset
+data = pd.read_csv(file_path)
+
+print("Dataset Preview:")
+print(data.head())
+
+# HANDLE MISSING VALUES
+print("\nMissing Values Before Cleaning:")
+print(data.isnull().sum())
+
+# FILL MISSING SMOKING UNKNOWN
+data['Smoking_Status'] = data['Smoking_Status'].fillna("Unknown")
+
+# FILL MISSING PERCENTAGES WITH MEAN 
+data['Smoking_Percentage'] = data.groupby('Region')['Smoking_Percentage'].transform(lambda x: x.fillna(x.mean()))
+
+print("\nMissing Values After Cleaning:")
+print(data.isnull().sum())
+
+# REGIONAL STATISTICS
+regional_summary = data.groupby('Region').agg({
+    'Smoking_Percentage': 'mean',
+    'Cases_Reported': 'sum',
+    'Smoking_Status': lambda x: (x == "Unknown").sum()  # Count unknown statuses
+}).reset_index()
+
+regional_summary.rename(columns={
+    'Smoking_Percentage': 'Average_Smoking_Percentage',
+    'Cases_Reported': 'Total_Cases',
+    'Smoking_Status': 'Unknown_Status_Count'
+}, inplace=True)
+
+# REGIONS WITH HIGHEST SMOKING PERCENTAGE
+high_risk_regions = regional_summary[regional_summary['Average_Smoking_Percentage'] > regional_summary['Average_Smoking_Percentage'].mean()]
+
+print("\nHigh-Risk Regions:")
+print(high_risk_regions)
+
+regional_summary.to_csv("regional_summary.csv", index=False)
+print("\nRegional summary saved to 'regional_summary.csv'.")
+
+print("\nKey Insights:")
+print(f"Region with the highest smoking percentage: {high_risk_regions.iloc[0]['Region']} ({high_risk_regions.iloc[0]['Average_Smoking_Percentage']:.2f}%)")
+print(f"Region with the highest unknown smoking statuses: {regional_summary.loc[regional_summary['Unknown_Status_Count'].idxmax()]['Region']} ({regional_summary['Unknown_Status_Count'].max()} cases)")
+
+print("\nRecommendations:")
+print("- Implement targeted anti-smoking programs in high-risk regions.")
+print("- Improve data collection protocols to reduce 'Unknown' smoking statuses.")
