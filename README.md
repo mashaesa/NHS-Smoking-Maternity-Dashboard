@@ -51,9 +51,6 @@ The regional division comparison recorded that the Northeast and Yorkshire had t
   - Expand public health campaigns in the Northeast and Yorkshire area and prioritise low-income families especially.
   - Conduct a case study on the North West area of London specifically to identify successful strategies and adapt them to higher-risk areas.
   - Develop a nationwide strategy to reduce smoking during maternity and focus especially on higher-risk areas such as Nottinghamshire, the Northeast, and Yorkshire.
-
-## Access the Dashboard
-- View the interactive site with screenshots and findings [here](https://mashaesa.github.io/NHS-Smoking-Maternity-Dashboard).
 ---
 ### ANALYSING WITH PYTHON (EXTRA TASK)
 
